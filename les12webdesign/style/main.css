@@ -1,0 +1,36 @@
+td{
+    border: 2px solid black;
+    width: 240px;
+    height: 90px;
+    text-align: center;
+    font-weight: bold;
+}
+img{
+    width: 74px;
+    height: 49px;
+    }
+
+#a{
+    background-color:#FFCCFF ;
+}
+#b{
+    background-color: #FF99FF;
+}
+#c { 
+    background-color:#FF66FF; 
+}
+#d { 
+    background-color:#FF33FF;
+ }
+#e {
+     background-color: #FF99CC;
+    }
+#f {
+     background-color: #FF66CC;
+    }
+#g {
+     background-color: #FF33CC;
+    }
+#h {
+     background-color: #FF00CC;
+    }
