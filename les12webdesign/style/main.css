@@ -1,13 +1,23 @@
+#header {
+    padding: 20px;
+    text-align: center;
+    background:darkgray;
+    color: black;
+    font-size: 30px;
+  }
+
+table  { border-collapse: collapse; border: 1px solid #C0C0C0;
+    margin-left: auto; margin-right: auto; }
 td{
     border: 2px solid black;
     width: 240px;
-    height: 90px;
+    height: 240px;
     text-align: center;
     font-weight: bold;
 }
 img{
-    width: 74px;
-    height: 49px;
+    width:220px;
+    height: 220px;
     }
 
 #a{
@@ -34,3 +44,12 @@ img{
 #h {
      background-color: #FF00CC;
     }
+#i{
+    background-color:darkgrey;
+}
+#footer {
+    padding: 20px;
+    text-align: center;
+    background:darkgray;
+    color: black;
+    font-size: 30px;
