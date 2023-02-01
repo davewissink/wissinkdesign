@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>wissinkdesign</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="mijncv.html">Mijn cv</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <form 
+    action="https://formspree.io/f/xqkoanwg"
+    method="POST">
+    <fieldset id="form">
+    
+        <legend>Persoonsgegevens</legend>
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" id="voornaam" name="voornaam" required>
+        <label for="achternaam">Achternaam:</label>
+        <input type="text" id="achternaam" name="achternaam" required>
+        <label for="Email">E-mailadres:</label>
+        <input type="email" id="Email" name="E-mail" required>
+      </fieldset>
+      <fieldset>
+        <legend>Wat is je vraag?</legend>
+        <label for="vraag">Wat wil je weten?</label><br>
+        <textarea name="bericht" id="vraag" maxlength="1500" required></textarea>
+      </fieldset>
+  
+    
+    <button type="submit">Verzenden</button>
+  </form>
+<footer>
+      <p>Deze website is gemaakt door wissinkdesign, alle rechten voorbehouden.</p>
+    </footer>
+  </body>
+</html>
