@@ -1,29 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Mijn pagina</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Vogel Eiland Lobith| Inloggen & Registreren</title>
 </head>
 <body>
-    <header><img src="afbeelding/logo.png" alt="bedrijflogo" style="width:200px;height:100px;"></header><h1>Newbricks</h1>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>LOGO .</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link active">Home</a></li>
+                <li><a href="#" class="link">Kweek verslagen</a></li>
+                <li><a href="#" class="link">Downloads</a></li>
+                <li><a href="#" class="link">Over ons </a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Leden login</button>
+            <button class="btn" id="registerBtn" onclick="register()">Registeren </button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
 
-<nav>
-    <a href="index.html">Index</a>
-    <a href="galerij.html">Galerij</a>
-    <a href="info.html">Info</a>
-</nav>
-<hr>
-<article>
-    <h3>Wat is er te doen</h3>
-    <p>Kom gezellig bouwen, spelen en leren met het hele gezin! Bezoek de attractie en beleef je eigen LEGO® avontuur.<br>
-    Ontdek de verschillende onderdelen van de attractie, zoals de Fantasie Express en de 4D Bioscoop.<br>
-    Samen bouwen met de meiden van LEGO® Friends en de LEGO® NINJAGO® Trainingszone verkennen.<br>
-    Of ga je liever op onderzoek uit in het DUPLO® Park en het Piraten Eiland?<br>
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
 
-    bron: <a href="https://www.legolanddiscoverycentre.com/scheveningen/">Legoland</a></p>
-<div>
-<iframe src="https://www.legolanddiscoverycentre.com" width="600" height="400"></a></iframe> 
-</div>
-</article>
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Nog geen leden account? <a href="#" onclick="register()">Registreer u hier</a></span>
+                <header>Inloggen</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Gebruikersnaam of Email">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Wachtwoord">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Inloggen">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Onthou mijn gegevens</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Wachtwoord vergeten?</a></label>
+                </div>
+            </div>
+        </div>
+
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Heeft u een account? <a href="#" onclick="login()">Inloggen</a></span>
+                <header>Registreer</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Voornaam">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Achternaam">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Wachtwoord">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check">Onthou mijn gegevens</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Voorwaarden</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+
+
+<script>
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+ 
+</script>
+
+<script>
+
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+
+</script>
+
 </body>
 </html>
