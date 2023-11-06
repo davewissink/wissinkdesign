@@ -1,149 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>Vogel Eiland Lobith| Inloggen & Registreren</title>
-</head>
-<body>
- <div class="wrapper">
-    <nav class="nav">
-        <div class="nav-logo">
-            <p>Vogel-Eiland Lobith</p>
-        </div>
-        <div class="nav-menu" id="navMenu">
-            <ul>
-                <li><a href="Homepage.html" class="link active">Home</a></li>
-                <li><a href="#" class="link">Kweek verslagen</a></li>
-                <li><a href="#" class="link">Downloads</a></li>
-                <li><a href="#" class="link">Over ons </a></li>
-            </ul>
-        </div>
-        <div class="nav-button">
-            <button class="btn white-btn" id="loginBtn" onclick="login()">Leden login</button>
-            <button class="btn" id="registerBtn" onclick="register()">Registeren </button>
-        </div>
-        <div class="nav-menu-btn">
-            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
-        </div>
-    </nav>
-
-<!----------------------------- Form box ----------------------------------->    
-    <div class="form-box">
-        
-        <!------------------- login form -------------------------->
-
-        <div class="login-container" id="login">
-            <div class="top">
-                <span>Nog geen leden account? <a href="#" onclick="register()">Registreer u hier</a></span>
-                <header>Inloggen</header>
-            </div>
-            <div class="input-box">
-                <input type="text" class="input-field" placeholder="Gebruikersnaam of Email">
-                <i class="bx bx-user"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" class="input-field" placeholder="Wachtwoord">
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="submit" value="Inloggen">
-            </div>
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="login-check">
-                    <label for="login-check"> Onthou mijn gegevens</label>
-                </div>
-                <div class="two">
-                    <label><a href="#">Wachtwoord vergeten?</a></label>
-                </div>
-            </div>
-        </div>
-
-        <!------------------- registration form -------------------------->
-        <div class="register-container" id="register">
-            <div class="top">
-                <span>Heeft u een account? <a href="#" onclick="login()">Inloggen</a></span>
-                <header>Registreer</header>
-            </div>
-            <div class="two-forms">
-                <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Voornaam">
-                    <i class="bx bx-user"></i>
-                </div>
-                <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Achternaam">
-                    <i class="bx bx-user"></i>
-                </div>
-            </div>
-            <div class="input-box">
-                <input type="text" class="input-field" placeholder="Email">
-                <i class="bx bx-envelope"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" class="input-field" placeholder="Wachtwoord">
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="submit" value="Register">
-            </div>
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="register-check">
-                    <label for="register-check">Onthou mijn gegevens</label>
-                </div>
-                <div class="two">
-                    <label><a href="#">Voorwaarden</a></label>
-                </div>
-            </div>
-        </div>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>wissinkdesign</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="topnav">
+        <a class="active" href="Homepage.html">Home</a>
+        <a href="mijncv.html">Mijn cv</a>
+        <a href="contact.html">Contact</a>
+       
     </div>
-</div>   
-
-
-<script>
-   
-   function myMenuFunction() {
-    var i = document.getElementById("navMenu");
-
-    if(i.className === "nav-menu") {
-        i.className += " responsive";
-    } else {
-        i.className = "nav-menu";
-    }
-   }
- 
-</script>
-
-<script>
-
-    var a = document.getElementById("loginBtn");
-    var b = document.getElementById("registerBtn");
-    var x = document.getElementById("login");
-    var y = document.getElementById("register");
-
-    function login() {
-        x.style.left = "4px";
-        y.style.right = "-520px";
-        a.className += " white-btn";
-        b.className = "btn";
-        x.style.opacity = 1;
-        y.style.opacity = 0;
-    }
-
-    function register() {
-        x.style.left = "-510px";
-        y.style.right = "5px";
-        a.className = "btn";
-        b.className += " white-btn";
-        x.style.opacity = 0;
-        y.style.opacity = 1;
-    }
-
-</script>
-
-</body>
+    <header>
+        <h1>Mijn naam Dave wissink</h1>
+    </header>
+         <div class="middenstuk">
+      <img class="displayed" src="Afbeeldingen/dave.png" alt="Profielfoto Dave">
+      <div class="alinea">
+        
+        <p>
+        Mijn naam is zoals u al gelezen had Dave wissink . En was een fanatieke hondensporter . 
+        Op de foto ziet u een voorbeeld van een sport onderdeel.<br>Dit noemen ze de highjump en is
+         vergelijkbaar 
+        met hoogspringen bij mensen. Hier springt Crow een hoogte van 1.95m zijn record is 2.05m.<br>
+        Hier ben ik inmiddels mee gestopt door me werk als internatinaal chauffeur en ik dus de hele week van huis ben.
+        En dus geen tijd meer heb om te trainen om ze klaar te stomen voor een wedstrijd. Ik beantwoord nog
+        wel vragen over het showen en trainen voor de hondensport.
+        </p>
+      </div>
+     </div>
+    <footer>
+      <p>Deze website is gemaakt door wissinkdesign, alle rechten voorbehouden.</p>
+    </footer>
+  </body>
 </html>
