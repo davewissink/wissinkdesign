@@ -193,7 +193,7 @@ a {
 	float: center;
 	font-size: 50pt;
 	color: #ffffff;
-	text-align: center;
+	text-align: left;
 }
 
 .ram{ width: 45%; float: left; }
