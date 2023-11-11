@@ -274,10 +274,10 @@ a {
 .magna_text {
     font-size: 20pt;
     color: #060401;
-    text-align: left;
+    text-align: right;
     line-height: 40px;
     width: 45%;
-    float: right;
+    float: left;
     margin-right: 0px;
 }
 
