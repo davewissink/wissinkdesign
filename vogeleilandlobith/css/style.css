@@ -33,7 +33,7 @@ html {
 
 body {
      color: #666666;
-     font-size: 12px;
+     font-size: 14px;
      font-family: 'Josefin Sans', sans-serif;;
      line-height: 1.80857;
      font-weight: normal;
@@ -191,9 +191,9 @@ a {
 .taital{
 	width: 57%; 
 	float: left;
-	font-size: 50pt;
-	color: #000000;
-	text-align: left;
+	font-size: 60pt;
+	color: #ffffff;
+	text-align: right;
 }
 
 .ram{ width: 45%; float: left; }
@@ -261,7 +261,7 @@ a {
   width: 100%;
   float: left;
   font-size: 50pt;
-  text-align: left;
+  text-align: right;
   margin-top: 70px;
 
 }
