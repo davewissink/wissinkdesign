@@ -239,10 +239,8 @@ a {
 .about_section{
 	width: 100%;
 	float: left;
-	
 	height: auto;
-	background-size: 100%;
-	background-repeat: no-repeat;
+	
 }
 
 .about_text{
