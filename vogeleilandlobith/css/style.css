@@ -147,7 +147,7 @@ a {
 	float: left;
 	background-image: url(../images/banner.jpg);
 	height: auto;
-	padding-top: 20px;	
+	padding-top: 10px;	
 	background-size: cover;
     background-repeat: no-repeat;
 }
