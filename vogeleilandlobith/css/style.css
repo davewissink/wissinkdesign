@@ -425,6 +425,7 @@ a {
 	height: auto;
 	padding-top: 55px;
 	background-size: 100%;
+    background-repeat: no-repeat;
     padding-bottom: 55px;
 
 }
