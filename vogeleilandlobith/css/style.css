@@ -168,10 +168,10 @@ a {
 }
 .menu_text ul{ margin:0px; padding: 0px;}
 .menu_text li{ 
-	float: left; 
+	float: right; 
 	padding-right: 15px;
   padding-left: 15px; 
-	font-size: 17pt;
+	font-size: 10pt;
 }
 .menu_text li a{
 	color: #ffffff;
