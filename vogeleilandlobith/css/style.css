@@ -153,13 +153,13 @@ a {
 }
 
 .active{ 
+	
 	background-color: #ffffff;
-	padding-top: 40px; 
-	padding-bottom: 5px; 
-	border-radius:  30px;
+	padding-top: 0px; 
+	padding-bottom: px; 
+	border-radius:  10px;
 	color: #000;
-  margin-top: 10px;
-
+  margin-top: 40
  }
 
 .menu_text{
