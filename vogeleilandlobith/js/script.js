@@ -8,6 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     });
 
+    // Sluit het menu als er buiten het menu wordt geklikt
+    document.addEventListener('click', function (event) {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickInsideToggle = menuToggle.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickInsideToggle) {
+            menu.style.display = 'none';
+        }
+    });
+
     searchIcon.addEventListener('click', function () {
         searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
     });

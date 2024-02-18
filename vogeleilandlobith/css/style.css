@@ -77,7 +77,6 @@ body {
 
 /* Aanvullende stijlen voor het logo */
 .logo {
-  width: 100%; /* Maak het logo 100% van de breedte van de container */
   text-align: center; /* Centreer het logo */
   position: relative;
   top: -20px; /* Laat het logo over de topbar vallen */
@@ -85,9 +84,8 @@ body {
 }
 
 .logo img {
+  height: 250px; /* Behoud de oorspronkelijke hoogte-breedteverhouding van het logo */
   max-width: 100%; /* Zorg ervoor dat het logo niet breder is dan de container */
-  height: 250px; /* Automatische hoogte aanpassing om de verhoudingen te behouden */
-  object-fit: contain; /* Behoud de oorspronkelijke hoogte-breedteverhouding van het logo */
 }
 
 /* Menu stijlen */
@@ -128,12 +126,15 @@ body {
   .menu {
     display: none; /* Verberg het menu standaard op kleine schermen */
     flex-direction: column; /* Zet de items onder elkaar in het hamburgermenu */
-    position: absolute;
-    top: 60px; /* Afstand tot de topbar */
-    right: 20px; /* Afstand tot de rechterkant */
+    position: fixed; /* Wijzig naar fixed voor volledige hoogte */
+    top: 0; /* Start vanaf de bovenkant */
+    right: 0; /* Rechts uitlijnen */
+    height: 100vh; /* Volledige hoogte van het viewport */
+    width: 250px; /* Breedte van het menu */
     background-color: #008000; /* Groene kleur voor het hamburgermenu */
-    width: 200px; /* Aangepaste breedte */
-    z-index: 1000; /* Zorg ervoor dat het menu boven andere inhoud staat */
+    z-index: 1000; /* Zorg ervoor dat het menu boven andere elementen verschijnt */
+    justify-content: flex-start; /* Items starten vanaf de bovenkant */
+    padding-top: 60px; /* Ruimte voor de topbar */
   }
 
   .menu-toggle {
@@ -144,16 +145,37 @@ body {
 
   .menu-toggle.active + .menu {
     display: flex;
-    justify-content: center; /* Center de items in het hamburgermenu */
-    align-items: center; /* Center de items in het hamburgermenu */
+  }
+
+  .menu li {
+    text-align: right; /* Tekst naar rechts uitlijnen */
+    width: 100%; /* Zorg ervoor dat de li de volledige breedte van het menu inneemt */
+    margin-bottom: 10px; /* Ruimte tussen menu-items toevoegen */
   }
 
   .menu li a {
-    padding: 15px 0; /* Voeg wat ruimte toe aan de boven- en onderkant van de tekst in het hamburgermenu */
-    text-align: center; /* Centreer de tekst in het hamburgermenu */
+    padding: 15px 20px; /* Aangepaste padding voor betere klikbaarheid */
+    display: block; /* Zorg ervoor dat de links als blok-elementen worden getoond */
   }
-  
-  .menu-toggle.active {
-    margin-right: 20px; /* Voeg wat ruimte toe aan de rechterkant van het hamburgermenu */
+
+  .search-box {
+    display: none; /* Verberg de zoekbalk standaard op kleine schermen */
+  }
+
+  .search-box.active {
+    display: flex; /* Toon de zoekbalk als actief */
+  }
+
+  .logo img {
+    max-width: 100%; /* Zorg ervoor dat het logo responsive blijft */
+    height: auto; /* Pas de hoogte automatisch aan */
+  }
+
+  .logo {
+    position: relative; /* Zorg ervoor dat het logo correct gepositioneerd blijft */
+    top: -20px; /* Laat het logo over de topbar vallen, consistent met de rest */
+    width: 100%; /* Zorg dat het logo de volledige breedte inneemt */
   }
 }
+
+
