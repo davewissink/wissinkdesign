@@ -104,6 +104,7 @@ body {
   margin: 0;
   display: flex;
   align-items: center;
+  position: relative; /* Toegevoegd voor het positioneren van het submenu */
 }
 
 .menu li a {
@@ -111,6 +112,45 @@ body {
   color: white;
   padding: 10px 15px; /* Aanpassen van de padding binnen het hamburgermenu */
   margin-bottom: 10px; /* Voeg een ondermarge toe voor extra ruimte tussen de links */
+}
+
+/* Submenu stijlen */
+.submenu {
+  position: absolute;
+  top: 100%; /* Plaats het submenu onder het hoofdmenu */
+  left: 0;
+  display: none;
+  flex-direction: column;
+  background-color: #008000; /* Groene kleur voor het submenu */
+  padding: 10px;
+}
+
+.menu:hover .submenu {
+  display: flex; /* Toon het submenu bij het zweven over het hoofdmenu */
+}
+
+/* Foto Galerij stijlen */
+.gallery {
+  margin-top: 20px;
+}
+
+.gallery h2 {
+  font-size: 24px;
+  color: #008000; /* Groen */
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.gallery img {
+  width: 48%; /* Zorg ervoor dat de afbeeldingen op kleinere schermen naast elkaar staan */
+  margin-bottom: 10px;
+  border-radius: 8px; /* Ronde hoeken voor een mooiere uitstraling */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Voeg een lichte schaduw toe voor diepte */
 }
 
 /* Responsief menu voor kleine schermen */
@@ -149,10 +189,9 @@ body {
   }
 
   .menu li a {
-    
-      padding: 15px; /* Pas de padding aan naar wens */
-      margin-bottom: 5px; /* Pas de margin-bottom aan naar wens */
-      text-align: center;
+    padding: 15px; /* Pas de padding aan naar wens */
+    margin-bottom: 5px; /* Pas de margin-bottom aan naar wens */
+    text-align: center;
   }
   /* Specifieke regel voor het laatste element in de lijst */
   .menu li:last-child a {
@@ -171,5 +210,10 @@ body {
   }
   .logo {
     top: -20px; /* Laat het logo over de topbar vallen */
+  }
+
+  /* Verberg het submenu op kleine schermen */
+  .submenu {
+    display: none;
   }
 }
