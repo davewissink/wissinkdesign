@@ -1,21 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
+    const menuToggle = document.getElementById('mobile-menu');
     const menu = document.querySelector('.menu');
     const searchIcon = document.getElementById('searchIcon');
     const searchBox = document.getElementById('searchBox');
 
     menuToggle.addEventListener('click', function () {
         menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    });
-
-    // Sluit het menu als er buiten het menu wordt geklikt
-    document.addEventListener('click', function (event) {
-        const isClickInsideMenu = menu.contains(event.target);
-        const isClickInsideToggle = menuToggle.contains(event.target);
-
-        if (!isClickInsideMenu && !isClickInsideToggle) {
-            menu.style.display = 'none';
-        }
     });
 
     searchIcon.addEventListener('click', function () {
