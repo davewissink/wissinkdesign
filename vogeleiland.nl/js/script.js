@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchBox = document.getElementById('searchBox');
 
     menuToggle.addEventListener('click', function () {
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        toggleMenu();
     });
 
     searchIcon.addEventListener('click', function () {
-        searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
+        toggleSearchBox();
     });
 
     const searchInput = document.getElementById('searchInput');
@@ -31,10 +31,30 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Sluit het menu wanneer er buiten wordt geklikt
+    // Sluit het menu en de zoekbalk wanneer er buiten wordt geklikt
     document.addEventListener('click', function (event) {
         if (!event.target.closest('.menu') && !event.target.closest('#mobile-menu')) {
-            menu.style.display = 'none';
+            hideMenu();
+        }
+
+        if (!event.target.closest('.search-box') && !event.target.closest('#searchIcon')) {
+            hideSearchBox();
         }
     });
+
+    function toggleMenu() {
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function hideMenu() {
+        menu.style.display = 'none';
+    }
+
+    function toggleSearchBox() {
+        searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function hideSearchBox() {
+        searchBox.style.display = 'none';
+    }
 });
