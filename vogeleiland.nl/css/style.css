@@ -1,0 +1,175 @@
+/* Basisinstellingen */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Lichtgrijze achtergrond */
+}
+
+/* Topbar stijlen */
+.topbar {
+  background-color: #006400; /* Donkergroen */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Icons aan de rechterkant plaatsen */
+}
+
+.icons img {
+  width: 30px; /* Pas dit aan aan de gewenste grootte voor iconen */
+  height: 30px;
+  cursor: pointer;
+}
+
+.search-box {
+  display: none; /* Verberg de zoekbalk standaard op kleine schermen */
+}
+
+#searchInput {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+#searchButton {
+  padding: 8px 12px;
+  background-color: #008000; /* Groene kleur voor de zoekknop */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hamburger Menu stijlen */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Aanvullende stijlen voor het logo */
+.logo {
+  width: 100%; /* Maak het logo 100% van de breedte van de container */
+  text-align: center; /* Centreer het logo */
+  position: relative;
+  top: -20px; /* Laat het logo over de topbar vallen */
+  display: block;
+}
+
+.logo img {
+  max-width: 100%; /* Zorg ervoor dat het logo niet breder is dan de container */
+  height: 350px; /* Responsieve hoogte */
+  object-fit: contain; /* Behoud de oorspronkelijke hoogte-breedteverhouding van het logo */
+}
+
+/* Menu stijlen */
+.navbar {
+  background-color: #008000; /* Groen */
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 10px; /* Aanpassen van de padding binnen het hamburgermenu */
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px; /* Aanpassen van de padding binnen het hamburgermenu */
+  margin-bottom: 10px; /* Voeg een ondermarge toe voor extra ruimte tussen de links */
+}
+
+/* Responsief menu voor kleine schermen */
+@media (max-width: 768px) {
+  .topbar,
+  .navbar {
+    flex-direction: row-reverse; /* Items naar rechts uitlijnen */
+  }
+
+  .icons,
+  .menu {
+    margin-left: auto; /* Items naar rechts uitlijnen in de topbar en navbar */
+  }
+
+  .menu {
+    display: none; /* Verberg het menu standaard op kleine schermen */
+    flex-direction: column; /* Zet de items onder elkaar in het hamburgermenu */
+    position: absolute;
+    top: 50px; /* Afstand tot de topbar */
+    right: 0; /* Aangepast naar 0 om de hele rechterkant te bedekken */
+    background-color: #008000; /* Groene kleur voor het hamburgermenu */
+    height: 100vh;
+    width: 150px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Items naar rechts uitlijnen in het hamburgermenu */
+  }
+
+  .menu-toggle.active + .menu {
+    display: flex;
+    justify-content: center; /* Center de items in het hamburgermenu */
+    align-items: center; /* Center de items in het hamburgermenu */
+  }
+
+  .menu li a {
+    
+      padding: 15px; /* Pas de padding aan naar wens */
+      margin-bottom: 5px; /* Pas de margin-bottom aan naar wens */
+      text-align: center;
+  }
+  /* Specifieke regel voor het laatste element in de lijst */
+  .menu li:last-child a {
+    margin-bottom: 5px; /* Zet de margin-bottom van het laatste element op nul */
+  }
+  .search-box {
+    display: none; /* Verberg de zoekbalk standaard op kleine schermen */
+  }
+
+  .search-box.active {
+    display: flex; /* Toon de zoekbalk als actief */
+  }
+  .logo img {
+    max-width: 100%; /* Zorg ervoor dat het logo responsive blijft */
+    height: auto; /* Responsieve hoogte */
+  }
+  .logo {
+    top: -20px; /* Laat het logo over de topbar vallen */
+  }
+}
