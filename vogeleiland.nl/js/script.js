@@ -30,4 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Sluit het menu wanneer er buiten wordt geklikt
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.menu') && !event.target.closest('#mobile-menu')) {
+            menu.style.display = 'none';
+        }
+    });
 });
