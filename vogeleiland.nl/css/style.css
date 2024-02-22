@@ -190,7 +190,7 @@ body {
 
   .menu li a {
     padding: 15px; /* Pas de padding aan naar wens */
-    margin-bottom: 5px; /* Pas de margin-bottom aan naar wens */
+    margin-bottom: 15px; /* Pas de margin-bottom aan naar wens */
     text-align: center;
   }
   /* Specifieke regel voor het laatste element in de lijst */
