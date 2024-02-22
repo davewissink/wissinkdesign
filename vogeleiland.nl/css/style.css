@@ -130,13 +130,19 @@ body {
 }
 
 /* Foto Galerij stijlen */
+/* Centreren van de galerij op alle schermgroottes */
 .gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Voeg deze regel toe om de tekst in het midden uit te lijnen */
   margin-top: 20px;
 }
 
 .gallery h2 {
   font-size: 24px;
   color: #008000; /* Groen */
+  
 }
 
 .gallery-container {
@@ -146,11 +152,24 @@ body {
   margin-top: 10px;
 }
 
-.gallery img {
-  width: 48%; /* Zorg ervoor dat de afbeeldingen op kleinere schermen naast elkaar staan */
-  margin-bottom: 10px;
-  border-radius: 8px; /* Ronde hoeken voor een mooiere uitstraling */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Voeg een lichte schaduw toe voor diepte */
+.slider {
+  overflow: hidden;
+  width: 80%; /* Pas de breedte aan naar wens */
+  max-width: 600px; /* Voeg een maximale breedte toe voor een betere responsiviteit */
+  margin: 0 auto; /* Centreren van de galerijcontainer */
+}
+
+.slide {
+  float: left;
+  width: 100%;
+  display: none;
+}
+
+.slide img {
+  width: 100%; /* Behoud de responsiviteit */
+  max-width: 400px; /* Stel hier je gewenste maximale breedte in */
+  height: auto;
+  margin: 0 auto; /* Centreer de afbeelding binnen de dia */
 }
 
 /* Responsief menu voor kleine schermen */

@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchBox = document.getElementById('searchBox');
 
     menuToggle.addEventListener('click', function () {
-        toggleMenu();
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     });
 
     searchIcon.addEventListener('click', function () {
-        toggleSearchBox();
+        searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
     });
 
     const searchInput = document.getElementById('searchInput');
@@ -17,44 +17,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
     searchButton.addEventListener('click', function () {
         const searchTerm = searchInput.value.toLowerCase();
-        const content = document.querySelector('.content'); // Pas dit aan naar de daadwerkelijke container van je inhoud
+        const content = document.querySelector('.content');
 
-        // Voeg hier code toe om de zoekfunctionaliteit te implementeren, bijvoorbeeld:
         const paragraphs = content.querySelectorAll('p');
 
         paragraphs.forEach(paragraph => {
             const text = paragraph.innerText.toLowerCase();
 
             if (text.includes(searchTerm)) {
-                paragraph.style.backgroundColor = '#FFFF00'; // Markeer de gevonden tekst (voorbeeld)
+                paragraph.style.backgroundColor = '#FFFF00';
             }
         });
     });
 
-    // Sluit het menu en de zoekbalk wanneer er buiten wordt geklikt
-    document.addEventListener('click', function (event) {
-        if (!event.target.closest('.menu') && !event.target.closest('#mobile-menu')) {
-            hideMenu();
+    // Image Slider
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.querySelectorAll('.slide');
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
         }
 
-        if (!event.target.closest('.search-box') && !event.target.closest('#searchIcon')) {
-            hideSearchBox();
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
         }
-    });
 
-    function toggleMenu() {
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    }
-
-    function hideMenu() {
-        menu.style.display = 'none';
-    }
-
-    function toggleSearchBox() {
-        searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
-    }
-
-    function hideSearchBox() {
-        searchBox.style.display = 'none';
+        slides[slideIndex - 1].style.display = 'block';
+        setTimeout(showSlides, 3000);
     }
 });
