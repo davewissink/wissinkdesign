@@ -142,7 +142,6 @@ body {
 .gallery h2 {
   font-size: 24px;
   color: #008000; /* Groen */
-  
 }
 
 .gallery-container {
@@ -208,15 +207,15 @@ body {
   }
 
   .menu li a {
-  text-decoration: none;
-  color: white;
-  padding: 10px 15px; /* Aanpassen van de padding binnen het hamburgermenu */
-  margin-bottom: 30px; /* Vergroot de ondermarge voor extra ruimte tussen de links */
-}
+    padding: 15px; /* Pas de padding aan naar wens */
+    margin-bottom: 15px; /* Pas de margin-bottom aan naar wens */
+    text-align: center;
+  }
   /* Specifieke regel voor het laatste element in de lijst */
   .menu li:last-child a {
-    margin-bottom: 0px; /* Zet de margin-bottom van het laatste element op nul */
+    margin-bottom: 5px; /* Zet de margin-bottom van het laatste element op nul */
   }
+
   .search-box {
     display: none; /* Verberg de zoekbalk standaard op kleine schermen */
   }
@@ -224,6 +223,7 @@ body {
   .search-box.active {
     display: flex; /* Toon de zoekbalk als actief */
   }
+
   .logo img {
     max-width: 100%; /* Zorg ervoor dat het logo responsive blijft */
     height: auto; /* Responsieve hoogte */
