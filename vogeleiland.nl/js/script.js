@@ -30,6 +30,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Sluit het menu als er buiten wordt geklikt
+    document.addEventListener('click', function (event) {
+        const isClickInsideMenu = menu.contains(event.target) || menuToggle.contains(event.target);
+        
+        if (!isClickInsideMenu) {
+            menu.style.display = 'none';
+        }
+    });
+
     // Image Slider
     let slideIndex = 0;
     showSlides();
