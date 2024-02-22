@@ -215,7 +215,7 @@ body {
 }
   /* Specifieke regel voor het laatste element in de lijst */
   .menu li:last-child a {
-    margin-bottom: 5px; /* Zet de margin-bottom van het laatste element op nul */
+    margin-bottom: 0px; /* Zet de margin-bottom van het laatste element op nul */
   }
   .search-box {
     display: none; /* Verberg de zoekbalk standaard op kleine schermen */
