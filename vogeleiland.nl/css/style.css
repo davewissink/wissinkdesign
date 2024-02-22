@@ -208,10 +208,11 @@ body {
   }
 
   .menu li a {
-    padding: 15px; /* Pas de padding aan naar wens */
-    margin-bottom: 15px; /* Pas de margin-bottom aan naar wens */
-    text-align: center;
-  }
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px; /* Aanpassen van de padding binnen het hamburgermenu */
+  margin-bottom: 30px; /* Vergroot de ondermarge voor extra ruimte tussen de links */
+}
   /* Specifieke regel voor het laatste element in de lijst */
   .menu li:last-child a {
     margin-bottom: 5px; /* Zet de margin-bottom van het laatste element op nul */
