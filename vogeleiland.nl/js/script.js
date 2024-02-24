@@ -6,9 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     menuToggle.addEventListener('click', function () {
         menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        searchBox.style.display = 'none';
     });
 
-    searchIcon.addEventListener('click', function () {
+    searchIcon.addEventListener('click', function (event) {
+        event.stopPropagation(); // Stop de click event van het verspreiden naar het document
         searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
     });
 
@@ -30,12 +32,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Sluit het menu als er buiten wordt geklikt
+    // Sluit het menu en de zoekbox als er buiten wordt geklikt
     document.addEventListener('click', function (event) {
         const isClickInsideMenu = menu.contains(event.target) || menuToggle.contains(event.target);
-        
-        if (!isClickInsideMenu) {
+        const isClickInsideSearch = searchBox.contains(event.target) || searchIcon.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickInsideSearch) {
             menu.style.display = 'none';
+            searchBox.style.display = 'none';
         }
     });
 

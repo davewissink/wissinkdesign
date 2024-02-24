@@ -1,10 +1,20 @@
-/* Basisinstellingen */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0; /* Lichtgrijze achtergrond */
 }
+
+.content {
+  text-align: center;
+  padding: 20px; /* Voeg padding toe voor ruimte rondom de inhoud */
+  line-height: 1.6; /* Pas de regelafstand aan voor leesbaarheid */
+  font-size: 16px; /* Pas de lettergrootte aan naar wens */
+  word-wrap: break-word; /* Breek lange woorden automatisch af */
+}
+
+
+
 
 /* Topbar stijlen */
 .topbar {
@@ -30,12 +40,20 @@ body {
 
 .search-box {
   display: none; /* Verberg de zoekbalk standaard op kleine schermen */
+  background-color: #008000; /* Groene kleur, dezelfde als de navbar */
+  padding: 10px; /* Aanpassen van de padding binnen de zoekbalk */
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #searchInput {
   padding: 8px;
   border: none;
   border-radius: 4px;
+  width: calc(100% - 16px); /* Breedte aanpassen met respect voor padding */
   margin-right: 8px;
 }
 
@@ -191,7 +209,8 @@ body {
     right: 0; /* Aangepast naar 0 om de hele rechterkant te bedekken */
     background-color: #008000; /* Groene kleur voor het hamburgermenu */
     height: 100vh;
-    width: 150px;
+    width: 100%; /* Volledige breedte van het scherm */
+    box-sizing: border-box;
   }
 
   .menu-toggle {
@@ -216,14 +235,6 @@ body {
     margin-bottom: 5px; /* Zet de margin-bottom van het laatste element op nul */
   }
 
-  .search-box {
-    display: none; /* Verberg de zoekbalk standaard op kleine schermen */
-  }
-
-  .search-box.active {
-    display: flex; /* Toon de zoekbalk als actief */
-  }
-
   .logo img {
     max-width: 100%; /* Zorg ervoor dat het logo responsive blijft */
     height: auto; /* Responsieve hoogte */
@@ -235,5 +246,24 @@ body {
   /* Verberg het submenu op kleine schermen */
   .submenu {
     display: none;
+  }
+
+  .search-box.active {
+    display: flex; /* Toon de zoekbalk als actief */
+  }
+
+  .search-box.active #searchInput {
+    width: calc(100% - 16px); /* Breedte aanpassen met respect voor padding */
+  }
+}
+
+/* Geef het menu weer op schermen groter dan 768 pixels */
+@media (min-width: 769px) {
+  .menu {
+    display: flex;
+  }
+
+  .search-box {
+    display: none; /* Verberg de zoekbalk op grotere schermen */
   }
 }
