@@ -13,9 +13,6 @@ body {
   word-wrap: break-word; /* Breek lange woorden automatisch af */
 }
 
-
-
-
 /* Topbar stijlen */
 .topbar {
   background-color: #006400; /* Donkergroen */
@@ -129,7 +126,7 @@ body {
   text-decoration: none;
   color: white;
   padding: 10px 15px; /* Aanpassen van de padding binnen het hamburgermenu */
-  margin-bottom: 30px; /* Voeg een ondermarge toe voor extra ruimte tussen de links */
+  margin-bottom: 20px; /* Voeg een ondermarge toe voor extra ruimte tussen de links */
 }
 
 /* Submenu stijlen */
@@ -147,14 +144,26 @@ body {
   display: flex; /* Toon het submenu bij het zweven over het hoofdmenu */
 }
 
+/* Laatste Facebook-berichten stijlen */
+.facebook-feed {
+  text-align: center;
+  padding: 20px;
+}
+
+.facebook-feed h2 {
+  font-size: 24px;
+  color: #008000; /* Groen */
+}
+
+.posts {
+  max-width: 600px; /* Pas de maximale breedte aan naar wens */
+  margin: 0 auto; /* Centreren van de Facebook-berichten */
+}
+
 /* Foto Galerij stijlen */
-/* Centreren van de galerij op alle schermgroottes */
 .gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; /* Voeg deze regel toe om de tekst in het midden uit te lijnen */
-  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .gallery h2 {
@@ -162,24 +171,15 @@ body {
   color: #008000; /* Groen */
 }
 
-.gallery-container {
+.slider {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.slider {
-  overflow: hidden;
-  width: 80%; /* Pas de breedte aan naar wens */
-  max-width: 600px; /* Voeg een maximale breedte toe voor een betere responsiviteit */
-  margin: 0 auto; /* Centreren van de galerijcontainer */
+  justify-content: space-around;
 }
 
 .slide {
-  float: left;
-  width: 100%;
-  display: none;
+  width: 100%; /* Pas de breedte van elke foto aan naar wens */
+  margin-bottom: 20px; /* Voeg wat ruimte toe tussen de foto's */
 }
 
 .slide img {
@@ -209,7 +209,7 @@ body {
     right: 0; /* Aangepast naar 0 om de hele rechterkant te bedekken */
     background-color: #008000; /* Groene kleur voor het hamburgermenu */
     height: 100vh;
-    width: 100%; /* Volledige breedte van het scherm */
+    width: 50%; /* Volledige breedte van het scherm */
     box-sizing: border-box;
   }
 
@@ -226,13 +226,13 @@ body {
   }
 
   .menu li a {
-    padding: 15px; /* Pas de padding aan naar wens */
-    margin-bottom: 15px; /* Pas de margin-bottom aan naar wens */
+    padding: 5px; /* Pas de padding aan naar wens */
+    margin-bottom: 25px; /* Pas de margin-bottom aan naar wens */
     text-align: center;
   }
   /* Specifieke regel voor het laatste element in de lijst */
   .menu li:last-child a {
-    margin-bottom: 5px; /* Zet de margin-bottom van het laatste element op nul */
+    margin-bottom: 1px; /* Zet de margin-bottom van het laatste element op nul */
   }
 
   .logo img {
