@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- Slick Carousel Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <title>Vogelvereniging</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Vogelvereniging Logo">
+        </div>
+        <div class="topbar">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Over Ons</a></li>
+                <li><a href="#">Evenementen</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Word lid</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hier komt de content van je website -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Ontdek de Wereld van Vogelkweek</h2>
+            <p>Welkom bij onze vogelvereniging, waar liefhebbers van vogelkweek samenkomen. Ontdek samen met ons de fascinerende wereld van gevederde vrienden, variërend van kleurrijke zangkanaries tot imposante roofvogels. Onze missie is het delen van kennis, het beschermen van natuurlijke habitats en het vieren van de verscheidenheid aan vogelsoorten die onze wereld rijk is.</p>
+            
+            <p>Of je nu een doorgewinterde kweker bent of net begint met het verkennen van de vogelkweek, onze vereniging biedt voor ieder wat wils. Verken met ons de vreugde van het observeren van broedgedrag, de wetenschap achter succesvolle kweekprogramma's, en hoe je kunt bijdragen aan het behoud en de bescherming van deze prachtige gevleugelde wezens.</p>
+    
+            <a href="#" class="btn">Word Lid</a>
+        </div>
+    </section>
+
+    <!-- Facebook iFrame -->
+    <div class="posts" id="facebookPosts" style="text-align: center;">
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fvogelvereniging.vogeleiland&tabs=timeline&width=740&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="640" height="600" style="border:none;overflow:hidden; margin-top: 50px; margin-bottom: 50px; margin-left: 20px; display: inline-block;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+        <!-- Fotoalbum met Slick Carousel -->
+        <div class="photo-album-slider" style="width: 30%; box-sizing: border-box; display: inline-block; vertical-align: top;">
+          
+            <div class="slider">
+                <img src="images/TT2023/thumbnail_IMG_3960.jpg" alt="Photo 1">
+                <img src="images/TT2023/thumbnail_IMG_3961.jpg" alt="Photo 2">
+                <img src="images/TT2023/thumbnail_IMG_3963.jpg" alt="Photo 3">
+                <img src="images/TT2023/thumbnail_IMG_3974.jpg" alt="Photo 4">
+                <!-- Voeg hier je eigen foto's toe -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Vogelvereniging Vogel-Eiland <p>Design@wissinkDesign</p>
+    </footer>
+
+    <!-- Slick Carousel JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Slick Carousel Initialisatie -->
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                fade: true,
+                speed: 1000,
+                pauseOnHover: false,
+                pauseOnFocus: false,
+            });
+        });
+    </script>
+</body>
+
+</html>
