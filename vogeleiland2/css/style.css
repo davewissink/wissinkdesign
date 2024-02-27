@@ -63,6 +63,41 @@ header img {
   border-radius: 20px;
 }
 
+#contact {
+  text-align: center;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 12px 4px rgba(0,0,0,0.1);
+  border-radius: 20px;
+}
+
+#breeder {
+  text-align: center;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 12px 4px rgba(0,0,0,0.1);
+  border-radius: 20px;
+}
+
+#events {
+  text-align: center;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 12px 4px rgba(0,0,0,0.1);
+  border-radius: 20px;
+}
+
+#events ul {
+  list-style: none;
+  padding: 0;
+}
+
 .slideshow-container {
   max-width: 800px;
   margin: 20px auto;
@@ -154,6 +189,8 @@ header img {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; /* Voeg border-radius toe aan het iframe */
 }
 
 .facebook-feed h2 {
@@ -165,11 +202,62 @@ header img {
   justify-content: center;
 }
 
+/* Contactformulier stijlen */
+.contact-form {
+  margin-top: 2rem;
+  max-width: 600px; /* Pas de maximale breedte aan zoals nodig */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem; /* Voeg onderste marge toe */
+}
+
+.contact-form h2 {
+  color: #333; /* Pas de kleur van de kop aan zoals nodig */
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555; /* Pas de kleur van labels aan zoals nodig */
+}
+
+.contact-form .form-control {
+  border-radius: 8px; /* Voeg border-radius toe voor afgeronde hoeken */
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc; /* Voeg een rand toe voor duidelijkheid */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Sta verticale aanpassing toe voor het tekstgebied */
+}
+
+.contact-form button {
+  background-color: #006400; /* Pas de achtergrondkleur van de knop aan */
+  color: #fff; /* Pas de tekstkleur van de knop aan */
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px; /* Voeg border-radius toe voor afgeronde hoeken */
+}
+
+.contact-form button:hover {
+  background-color: #0056b3; /* Pas de achtergrondkleur aan bij hover */
+}
+
+
 footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 1em;
+  padding: 0.5em;
   width: 100%;
   box-sizing: border-box;
   white-space: nowrap;
@@ -217,12 +305,9 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1em;
+    padding: 0.5em;
     width: 100%;
     box-sizing: border-box;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     position: relative;
     bottom: 0;
   }
