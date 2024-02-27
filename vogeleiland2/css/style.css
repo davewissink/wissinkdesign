@@ -232,7 +232,7 @@ footer {
   }
 
   .topbar {
-    background-color: #006400;
+    background-color: #000800;
     position: relative;
   }
 
@@ -243,7 +243,7 @@ footer {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #006400;
+    background-color: #000a00;
   }
 
   .topbar nav.active {
@@ -255,14 +255,7 @@ footer {
     margin-bottom: 5px;
   }
 
-  /* Nieuwe regel om de zwarte balk onder de header toe te voegen */
-  header::after {
-    content: "";
-    display: block;
-    background-color: #000; /* Zwarte achtergrondkleur */
-    height: 5px; /* Hoogte van de balk */
-    width: 100%;
-  }
+  
 
   footer {
     background-color: #333;
