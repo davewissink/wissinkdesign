@@ -15,7 +15,7 @@ header {
 }
 
 header img {
-  max-width: 40%;
+  max-width: 50%;
   height: auto;
 }
 
@@ -70,7 +70,7 @@ header img {
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  position: relative; /* Voeg deze regel toe om een relatieve positie in te stellen */
+  position: relative;
 }
 
 .mySlides {
@@ -90,7 +90,7 @@ header img {
   user-select: none;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
-  border: none; /* Voeg deze regel toe om de standaard grens te verwijderen */
+  border: none;
 }
 
 .prev {
@@ -102,7 +102,6 @@ header img {
   right: 0;
   border-radius: 0 3px 3px 0;
 }
-
 
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
@@ -165,6 +164,7 @@ header img {
   display: flex;
   justify-content: center;
 }
+
 footer {
   background-color: #333;
   color: #fff;
@@ -175,13 +175,14 @@ footer {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  position: relative; /* Voeg deze regel toe voor een relatieve positie */
-  bottom: 0; /* Voeg deze regel toe om de footer aan de onderkant te positioneren */
+  position: relative;
+  bottom: 0;
 }
+
 /* Media queries for responsiveness */
 @media screen and (max-width: 600px) {
   header img {
-    width: 100%;
+    max-width: 80%; /* Aangepast voor kleinere schermen */
   }
 
   .menu-toggle {
@@ -222,7 +223,7 @@ footer {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    position: relative; /* Voeg deze regel toe voor een relatieve positie */
-    bottom: 0; /* Voeg deze regel toe om de footer aan de onderkant te positioneren */
+    position: relative;
+    bottom: 0;
   }
-}  
+}
