@@ -1,9 +1,70 @@
-#breeder {
-    text-align: center;
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0 12px 4px rgba(0,0,0,0.1);
-    border-radius: 20px;
-  }
+.container-stijl {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 12px 4px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  margin-bottom: 20px; /* Voeg een margin toe onder elke sectie */
+}
+
+#breeder h2,
+.kweker-sectie h2 {
+  color: #333;
+}
+
+.info {
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.closing {
+  font-style: italic;
+  color: #555;
+}
+
+.kweker-menu-container {
+  background-color: #006400;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.kweker-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kweker-menu ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.kweker-menu ul li a {
+  text-decoration: none;
+  color: #f7efef;
+  font-weight: bold;
+}
+
+.kweker-menu ul li a:hover {
+  color: #017cff;
+}
+.kweker-afbeelding {
+  max-width: 100%; /* Zorgt ervoor dat de afbeelding niet groter wordt dan zijn oorspronkelijke grootte */
+  height: auto; /* Behoudt de aspect ratio van de afbeelding */
+  border-radius: 10px; /* Afgeronde hoeken voor de afbeelding */
+  cursor: pointer; /* Maakt de afbeelding aanklikbaar */
+}
+
+.kweker-afbeelding:hover {
+  opacity: 0.8; /* Verlaagt de opaciteit van de afbeelding wanneer er overheen wordt gehoverd */
+}
