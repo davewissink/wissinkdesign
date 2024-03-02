@@ -58,6 +58,7 @@ strong {
 .kweker-menu ul li a:hover {
   color: #017cff;
 }
+
 .kweker-afbeelding {
   max-width: 100%; /* Zorgt ervoor dat de afbeelding niet groter wordt dan zijn oorspronkelijke grootte */
   height: auto; /* Behoudt de aspect ratio van de afbeelding */
@@ -67,4 +68,24 @@ strong {
 
 .kweker-afbeelding:hover {
   opacity: 0.8; /* Verlaagt de opaciteit van de afbeelding wanneer er overheen wordt gehoverd */
+}
+
+/* Media query voor schermen kleiner dan 600px */
+@media screen and (max-width: 600px) {
+  .container-stijl {
+    max-width: 100%; /* Pas de maximale breedte aan voor kleinere schermen */
+  }
+
+  .kweker-menu-container {
+    padding: 5px 0; /* Pas de padding aan voor kleinere schermen */
+  }
+
+  .kweker-afbeelding {
+    border-radius: 10px; /* Verwijder afgeronde hoeken voor afbeelding op kleinere schermen */
+  }
+  /* Pas de breedte van het iframe aan op kleinere schermen */
+  iframe {
+    width: 100%;
+    height: auto;
+  }
 }
