@@ -1,0 +1,35 @@
+/* Voeg deze stijlen toe voor het dashboard */
+
+.card {
+    transition: transform 0.3s;
+    background-color: #ff8c00; /* Oranje achtergrond */
+    color: #000; /* Zwarte tekstkleur op oranje achtergrond */
+    border: 2px solid #000; /* Zwarte rand */
+    border-radius: 10px; /* Afgeronde hoeken */
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Verhoogde schaduw bij hover voor diepte */
+  }
+  
+  .container {
+    color: #ff8c00; /* Oranje tekstkleur voor de hele container */
+    
+  }
+  
+  h2 {
+    color: #ff8c00; /* Oranje tekstkleur voor koppen */
+    text-shadow: 2px 5px 4px rgba(13, 0, 0, 0.2); /* Tekstschaduw voor diepte */
+    font-size: 2.5rem; /* Aanpassing van lettergrootte */
+    margin-top: 5px;
+    margin-bottom: 10px; /* Extra ruimte onder koppen */
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .btn-primary{
+    background-color: #ff8c00;
+    border-color: #000;
+    color: #000;
+  }

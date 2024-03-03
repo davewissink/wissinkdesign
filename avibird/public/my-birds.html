@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mijn Vogels</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/my-style.css">
+  <style>
+    .bird-card {
+      transition: transform 0.3s;
+      background-color: #ff8c00; /* Oranje achtergrond */
+      color: #000; /* Zwarte tekstkleur op oranje achtergrond */
+      border: 2px solid #000; /* Zwarte rand */
+      border-radius: 10px; /* Afgeronde hoeken */
+      overflow: hidden;
+      margin: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .bird-card {
+        width: calc(100% - 2rem); /* Volledige breedte op kleine schermen */
+      }
+    }
+
+    #editForm {
+      transition: transform 0.3s;
+      background-color: #ff8c00; /* Oranje achtergrond */
+      color: #000; /* Zwarte tekstkleur op oranje achtergrond */
+      border: 2px solid #000; /* Zwarte rand */
+      border-radius: 10px; /* Afgeronde hoeken */
+      overflow: hidden;
+      margin: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <a href="dashboard.html" class="btn btn-back">Terug naar Dashboard</a>
+  <h2>Mijn Vogels</h2>
+
+  <div id="editForm" style="display:none;">
+    <input type="hidden" id="editId">
+    Soort: <input type="text" id="editSoort"><br>
+    Ondersoort: <input type="text" id="editOndersoort"><br>
+    Ringnummer: <input type="text" id="editRingnummer"><br>
+    Geboortedatum: <input type="date" id="editGeboortedatum"><br>
+    Geslacht: <input type="text" id="editGeslacht"><br>
+    Kleurslag: <input type="text" id="editKleurslag"><br>
+    Split: <input type="text" id="editSplit"><br>
+    <button onclick="updateVogel()">Opslaan</button>
+    <button onclick="hideEditForm()">Annuleren</button>
+  </div>
+  
+  <div id="birds-list"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      laadVogels();
+    });
+
+    function laadVogels() {
+      fetch('http://localhost:3000/my-birds')
+        .then(response => response.json())
+        .then(data => {
+          const birdsList = document.getElementById('birds-list');
+          birdsList.innerHTML = '';
+          data.forEach(bird => {
+            const card = document.createElement('div');
+            card.className = 'bird-card';
+            card.innerHTML = `
+              <h5>${bird.soort}</h5>
+              <p>Ondersoort: ${bird.ondersoort}</p>
+              <p>Ringnummer: ${bird.ringnummer}</p>
+              <p>Geboortedatum: ${bird.geboortedatum.split('T')[0]}</p>
+              <p>Geslacht: ${bird.geslacht}</p>
+              <p>Kleurslag: ${bird.kleurslag}</p>
+              <p>Split: ${bird.split}</p>
+              <button onclick="bewerkVogel(${JSON.stringify(bird).split('"').join("&quot;")})">Bewerken</button>
+              <button onclick="verwijderVogel(${bird.id})">Verwijderen</button>
+            `;
+            birdsList.appendChild(card);
+          });
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function bewerkVogel(bird) {
+      document.getElementById('editForm').style.display = 'block';
+      document.getElementById('editId').value = bird.id;
+      document.getElementById('editSoort').value = bird.soort;
+      document.getElementById('editOndersoort').value = bird.ondersoort;
+      document.getElementById('editRingnummer').value = bird.ringnummer;
+      document.getElementById('editGeboortedatum').value = bird.geboortedatum.split('T')[0];
+      document.getElementById('editGeslacht').value = bird.geslacht;
+      document.getElementById('editKleurslag').value = bird.kleurslag;
+      document.getElementById('editSplit').value = bird.split;
+    }
+
+    function hideEditForm() {
+      document.getElementById('editForm').style.display = 'none';
+    }
+
+    function updateVogel() {
+      const vogelId = document.getElementById('editId').value;
+      const updatedVogel = {
+        soort: document.getElementById('editSoort').value,
+        ondersoort: document.getElementById('editOndersoort').value,
+        ringnummer: document.getElementById('editRingnummer').value,
+        geboortedatum: document.getElementById('editGeboortedatum').value,
+        geslacht: document.getElementById('editGeslacht').value,
+        kleurslag: document.getElementById('editKleurslag').value,
+        split: document.getElementById('editSplit').value,
+      };
+
+      fetch(`http://localhost:3000/update-bird/${vogelId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedVogel),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data.message);
+        hideEditForm();
+        laadVogels();
+      })
+      .catch(error => console.error('Error:', error));
+    }
+
+    function verwijderVogel(birdId) {
+      const bevestiging = confirm('Weet je zeker dat je deze vogel wilt verwijderen?');
+      
+      if (bevestiging) {
+        fetch(`http://localhost:3000/delete-bird/${birdId}`, {
+          method: 'DELETE',
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data.message);
+          laadVogels();
+        })
+        .catch(error => console.error('Error:', error));
+      }
+    }
+  </script>
+</body>
+</html>

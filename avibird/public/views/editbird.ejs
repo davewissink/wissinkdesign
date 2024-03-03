@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vogel Bewerken</title>
+</head>
+<body>
+  <h2>Vogel Bewerken</h2>
+
+  <form id="editBirdForm" action="/edit-bird/<%= vogelId %>" method="POST">
+    <!-- Voeg hier de formulierelementen toe voor het bewerken van de vogel -->
+    <label for="soort">Soort:</label>
+    <input type="text" id="soort" name="soort" value="<%= vogel.soort %>" required>
+
+    <label for="ondersoort">Ondersoort:</label>
+    <input type="text" id="ondersoort" name="ondersoort" value="<%= vogel.ondersoort %>" required>
+
+    <label for="ringnummer">Ringnummer:</label>
+    <input type="text" id="ringnummer" name="ringnummer" value="<%= vogel.ringnummer %>" required>
+
+    <label for="geboortedatum">Geboortedatum:</label>
+    <input type="date" id="geboortedatum" name="geboortedatum" value="<%= vogel.geboortedatum %>" required>
+
+    <label for="geslacht">Geslacht:</label>
+    <select id="geslacht" name="geslacht" required>
+      <option value="man" <%= vogel.geslacht === 'man' ? 'selected' : '' %>>Man</option>
+      <option value="vrouw" <%= vogel.geslacht === 'vrouw' ? 'selected' : '' %>>Vrouw</option>
+      <option value="onbekend" <%= vogel.geslacht === 'onbekend' ? 'selected' : '' %>>Onbekend</option>
+    </select>
+
+    <label for="kleurslag">Kleurslag:</label>
+    <input type="text" id="kleurslag" name="kleurslag" value="<%= vogel.kleurslag %>" required>
+
+    <label for="split">Split:</label>
+    <input type="text" id="split" name="split" value="<%= vogel.split %>" required>
+
+    <button type="button" onclick="submitForm()">Opslaan</button>
+  </form>
+
+  <!-- Voeg je bewerkingsmodal toe -->
+  <div id="bewerkVogelModal" style="display:none;">
+    <input type="text" id="soortModal" placeholder="Soort">
+    <input type="text" id="ondersoortModal" placeholder="Ondersoort">
+    <input type="text" id="ringnummerModal" placeholder="Ringnummer">
+    <input type="text" id="geboortedatumModal" placeholder="Geboortedatum">
+    <select id="geslachtModal">
+      <option value="man">Man</option>
+      <option value="vrouw">Vrouw</option>
+      <option value="onbekend">Onbekend</option>
+    </select>
+    <input type="text" id="kleurslagModal" placeholder="Kleurslag">
+    <input type="text" id="splitModal" placeholder="Split">
+    <button onclick="sluitBewerkModal()">Annuleren</button>
+    <button onclick="bevestigBewerken()">Bewerken</button>
+  </div>
+
+  <!-- Voeg je script toe -->
+  <script>
+    function submitForm() {
+      document.getElementById('editBirdForm').submit();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const bewerkKnoppen = document.querySelectorAll('.bewerk-knop');
+      bewerkKnoppen.forEach(function(knop) {
+        knop.addEventListener('click', function() {
+          const vogelData = getVogelDataFromRow(knop.closest('tr'));
+          vulBewerkingsmodalMetVogelgegevens(vogelData);
+        });
+      });
+    });
+
+    function getVogelDataFromRow(row) {
+      const cells = row.getElementsByTagName('td');
+      return {
+        soort: cells[0].textContent,
+        ondersoort: cells[1].textContent,
+        ringnummer: cells[2].textContent,
+        geboortedatum: cells[3].textContent,
+        geslacht: cells[4].textContent,
+        kleurslag: cells[5].textContent,
+        split: cells[6].textContent,
+      };
+    }
+
+    function vulBewerkingsmodalMetVogelgegevens(vogelData) {
+      document.getElementById('soortModal').value = vogelData.soort;
+      document.getElementById('ondersoortModal').value = vogelData.ondersoort;
+      document.getElementById('ringnummerModal').value = vogelData.ringnummer;
+      document.getElementById('geboortedatumModal').value = vogelData.geboortedatum;
+      document.getElementById('geslachtModal').value = vogelData.geslacht;
+      document.getElementById('kleurslagModal').value = vogelData.kleurslag;
+      document.getElementById('splitModal').value = vogelData.split;
+
+      document.getElementById('bewerkVogelModal').style.display = 'block';
+    }
+
+    function sluitBewerkModal() {
+      document.getElementById('bewerkVogelModal').style.display = 'none';
+    }
+
+    function bevestigBewerken() {
+      const bewerkteVogel = {
+        soort: document.getElementById('soortModal').value,
+        ondersoort: document.getElementById('ondersoortModal').value,
+        ringnummer: document.getElementById('ringnummerModal').value,
+        geboortedatum: document.getElementById('geboortedatumModal').value,
+        geslacht: document.getElementById('geslachtModal').value,
+        kleurslag: document.getElementById('kleurslagModal').value,
+        split: document.getElementById('splitModal').value,
+      };
+
+      console.log('Bewerkte gegevens:', bewerkteVogel);
+
+      sluitBewerkModal();
+    }
+  </script>
+</body>
+</html>

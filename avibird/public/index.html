@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AviBird App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div id="loginPage" class="text-center">
+      <h2 class="mb-4">Login</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Wachtwoord:</label>
+          <input type="password" class="form-control" id="password" required>
+        </div>
+        <button type="button" class="btn btn-success" onclick="login()">Login</button>
+        <a href="#" onclick="showPasswordRecovery()" class="d-block mt-2">Wachtwoord vergeten?</a>
+      </form>
+    </div>
+
+    <div id="registrationPage" style="display: none;" class="text-center mt-4">
+      <h2 class="mb-4">Registratie</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="name">Naam:</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="regEmail">Email:</label>
+          <input type="email" class="form-control" id="regEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="regPassword">Wachtwoord:</label>
+          <input type="password" class="form-control" id="regPassword" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Bevestig wachtwoord:</label>
+          <input type="password" class="form-control" id="confirmPassword" required>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="register()">Registreer</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

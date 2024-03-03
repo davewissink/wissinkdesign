@@ -1,0 +1,52 @@
+/* Algemene stijlen */
+body {
+    background-color: #000407; /* Donkeroranje als achtergrondkleur */
+}
+
+.container {
+    background-color: #0a0101;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Navigatiebalk stijlen */
+.navbar {
+    background-color: #ff4500; /* Oranje als hoofdkleur voor de navigatiebalk */
+}
+
+.navbar-brand {
+    color: #080000;
+}
+
+/* Card stijlen */
+.card {
+    margin-bottom: 20px;
+    background-color: #ff4500; /* Oranje achtergrond voor de cards */
+    border: none; /* Geen rand voor de cards */
+    border-radius: 8px; /* Afgeronde hoeken voor de cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #ff4500; /* Oranje voor de card headers */
+    color: #ffffff;
+    border-radius: 8px 8px 0 0; /* Afgeronde hoeken voor de bovenkant van de header */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Link stijlen */
+.card-link {
+    color: #ff4500; /* Oranje kleur voor de links in de cards */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+    color: #ff7f50; /* Donkeroranje kleur voor hover-effect */
+}

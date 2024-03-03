@@ -1,0 +1,113 @@
+
+    /* Voeg hier je eigen stijl toe */
+    body {
+      background-color: #f8f9fa;
+      color: #343a40;
+    }
+
+    h2 {
+      color: #ff8c00; /* Oranje tekstkleur voor koppen */
+      text-shadow: 2px 5px 4px rgba(13, 0, 0, 0.2); /* Tekstschaduw voor diepte */
+      font-size: 2.5rem; /* Aanpassing van lettergrootte */
+      margin-top: 5px;
+      margin-bottom: 10px; /* Extra ruimte onder koppen */
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    table {
+      margin-top: 20px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid #343a40;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    a.btn-back {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #ff8c00;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .btn-primary{
+      background-color: #ff8c00;
+      border-color: #000;
+    }
+    .btn-secondary {
+      color: #fff;
+      background-color: #ff8c00;
+      border-color: #000;
+    }
+
+    /* Aangepaste stijl voor de kaarten */
+    .card {
+      transition: transform 0.3s;
+      background-color: #ff8c00; /* Oranje achtergrond */
+      color: #000; /* Zwarte tekstkleur op oranje achtergrond */
+      border: 2px solid #000; /* Zwarte rand */
+      border-radius: 10px; /* Afgeronde hoeken */
+      overflow: hidden;
+      margin: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+ 
+    #editForm {
+      display: none;
+      background-color: #ff8c00; /* Grijze achtergrond */
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    #editForm input {
+      margin-bottom: 10px;
+    }
+
+    #editForm button {
+      background-color: #4CAF50; /* Groene achtergrond */
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #editForm button:hover {
+      background-color: #45a049; /* Donkergroene achtergrond bij hover */
+    }
+    
+    .bird-card {
+      background: #fff;
+      border-radius: 2px;
+      display: inline-block;
+      margin: 1rem;
+      position: relative;
+      box-shadow: 0 1px 2px rgba(0,0,0,.1);
+      padding: 20px;
+      box-sizing: border-box;
+      width: calc(100% / 3 - 2rem); /* Drie kaarten per rij */
+    }
+
+    @media (max-width: 768px) {
+      .bird-card {
+        width: calc(100% - 2rem); /* Volledige breedte op kleine schermen */
+      }
+    }
+
+    #editForm {
+      background-color: #ff8c00;
+      padding: 20px;
+      margin-top: 20px;
+    }
+ 

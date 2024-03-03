@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koop en Verkoop</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/koop-en-verkoop-style.css"> <!-- Add your custom stylesheet here -->
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Koop en Verkoop</h2>
+
+    <!-- Form for adding items -->
+    <form id="addItemForm">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="item">Item:</label>
+          <input type="text" class="form-control" id="item" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="price">Prijs:</label>
+          <input type="number" class="form-control" id="price" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="seller">Verkoper:</label>
+          <input type="text" class="form-control" id="seller" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">Voeg Toe</button>
+    </form>
+
+    <!-- Cards for the items -->
+    <div id="itemList" class="card-columns mt-3">
+      <!-- Dynamically generated cards will go here -->
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="js/koop-en-verkoop-script.js" defer></script> <!-- Add your custom JavaScript file here -->
+</body>
+</html>

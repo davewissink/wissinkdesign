@@ -1,0 +1,69 @@
+<!-- In add-bird.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/add-bird.css">
+    <title>AviBird - Vogel Invoeren</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Vogel Invoeren</h1>
+
+        <form id="addBirdForm">
+            <label for="birdSpecies">Soort:</label>
+            <input type="text" id="birdSpecies" required>
+
+            <label for="ringNumber">Ringnummer:</label>
+            <input type="text" id="ringNumber" required>
+
+            <label for="gender">Geslacht:</label>
+            <select id="gender">
+                <option value="">-- Selecteer geslacht --</option>
+                <option value="man">Man</option>
+                <option value="pop">Pop</option>
+                <option value="onbekend">Onbekend</option>
+            </select>
+
+            <label for="breedingYear">Kweekjaar:</label>
+            <input type="text" id="breedingYear" required>
+
+            <label for="color">Kleur:</label>
+            <input type="text" id="color" required>
+
+            <label for="splitFor">Split voor:</label>
+            <input type="text" id="splitFor" required>
+
+            <label for="father">Vader:</label>
+            <input type="text" id="father" required>
+
+            <label for="mother">Moeder:</label>
+            <input type="text" id="mother" required>
+
+            <label for="breeder">Kweker:</label>
+            <input type="text" id="breeder" required>
+
+            <button type="submit">Voeg Vogel Toe</button>
+        </form>
+        <div class="card" id="Card" style="display:none;">
+            <h2>Ingevoerde Vogel</h2>
+            <div class="card-content">
+                <ul>
+                    <li><strong>Soort:</strong> <span id="displaySpecies"></span></li>
+                    <li><strong>Ringnummer:</strong> <span id="displayRingNumber"></span></li>
+                    <li><strong>Geslacht:</strong> <span id="displayGender"></span></li>
+                    <li><strong>Kweekjaar:</strong> <span id="displayBreedingYear"></span></li>
+                    <li><strong>Kleur:</strong> <span id="displayColor"></span></li>
+                    <li><strong>Split voor:</strong> <span id="displaySplitFor"></span></li>
+                    <li><strong>Vader:</strong> <span id="displayFather"></span></li>
+                    <li><strong>Moeder:</strong> <span id="displayMother"></span></li>
+                    <li><strong>Kweker:</strong> <span id="displayBreeder"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/add-bird.js"></script>
+</body>
+</html>

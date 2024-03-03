@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voeg Vogel Toe</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/add-bird-style.css"> <!-- Voeg hier je eigen stijlblad toe -->
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Voeg Vogel Toe</h2>
+    <a href="dashboard.html" class="btn btn-secondary mb-3">Terug naar Dashboard</a>
+    <form id="addBirdForm">
+      <div class="form-group">
+        <label for="soort">Soort:</label>
+        <input type="text" class="form-control" id="soort" required>
+      </div>
+      <div class="form-group">
+        <label for="ondersoort">Ondersoort:</label>
+        <input type="text" class="form-control" id="ondersoort">
+      </div>
+      <div class="form-group">
+        <label for="kleurslag">Kleurslag:</label>
+        <input type="text" class="form-control" id="kleurslag">
+      </div>
+      <div class="form-group">
+        <label for="kleurslag">Split voor:</label>
+        <input type="text" class="form-control" id="split">
+      </div>
+      <div class="form-group">
+        <label for="geslacht">Geslacht:</label>
+        <select class="form-control" id="geslacht">
+          <option value="man">Man</option>
+          <option value="vrouw">Vrouw</option>
+          <option value="onbekend">Onbekend</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="geboortedatum">Geboortedatum:</label>
+        <input type="text" class="form-control" id="geboortedatum" required data-input>
+      </div>
+      <div class="form-group">
+        <label for="ringnummer">Ringnummer:</label>
+        <input type="text" class="form-control" id="ringnummer" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Opslaan</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="js/add-bird-script.js"></script> <!-- Voeg hier je eigen JavaScript-bestand toe -->
+</body>
+</html>

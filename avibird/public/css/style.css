@@ -1,0 +1,48 @@
+/* Aangepaste kleurenschema */
+:root {
+  --primary-color: #ff8c00; /* Oranje */
+  --secondary-color: #000;   /* Zwart */
+}
+
+body {
+  background-color: #f4f4f4; /* Lichtgrijze achtergrond */
+}
+
+/* Aangepaste stijlen voor formulieren */
+form {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Diepte en dimensie toegevoegd */
+}
+
+/* Aangepaste stijlen voor knoppen */
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: var(--primary-color); /* Oranje achtergrond */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darken(var(--primary-color), 10%); /* Donkerder oranje bij hover */
+}
+
+/* Aangepaste stijlen voor links */
+a {
+  color: var(--primary-color); /* Oranje tekstkleur */
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+a:hover {
+  color: darken(var(--primary-color), 20%); /* Donkerder oranje bij hover */
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owned Birds</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Owned Birds</h1>
+        <ul id="birdList" class="list-group">
+            <!-- Bird items will be dynamically added here -->
+        </ul>
+        
+        <!-- Inline Edit Form (hidden until editing) -->
+        <div id="editFormContainer" style="display:none;">
+            <h2>Edit Bird</h2>
+            <form id="editBirdForm">
+                <input type="hidden" id="birdId">
+                <label for="soort">Soort:</label>
+                <input type="text" id="soort" name="soort"><br>
+                <label for="geslacht">Geslacht:</label>
+                <input type="text" id="geslacht" name="geslacht"><br>
+                <label for="ringnummer">Ringnummer:</label>
+                <input type="text" id="ringnummer" name="ringnummer"><br>
+                <!-- Add more fields as needed -->
+                <button type="submit" class="btn btn-primary">Bewerk Vogel</button>
+                <button type="button" class="btn btn-secondary" onclick="cancelEdit()">Annuleren</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
