@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kweekkaart</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/common-styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Kweekkaart</h2>
+    
+    <a href="dashboard.html" class="btn btn-secondary mb-3">Terug naar Dashboard</a>
+    <form id="breedingForm">
+      <div class="form-group">
+        <label for="kooinummer">Kooinummer:</label>
+        <input type="text" class="form-control" id="kooinummer" required>
+      </div>
+      <div class="form-group">
+        <label for="kweekjaar">Kweekjaar:</label>
+        <input type="text" class="form-control" id="kweekjaar" required>
+      </div>
+      <div class="form-group">
+        <label for="kweekronde">Kweekronde:</label>
+        <input type="text" class="form-control" id="kweekronde" required>
+      </div>
+      
+      <div class="form-group">
+        <h3>Vader</h3>
+        <label for="fatherName">Naam:</label>
+        <input type="text" class="form-control" id="fatherName" required>
+      </div>
+
+      <div class="form-group">
+        <h3>Moeder</h3>
+        <label for="motherName">Naam:</label>
+        <input type="text" class="form-control" id="motherName" required>
+      </div>
+
+      <!-- Voeg hier andere kweekinformatie toe -->
+
+      <div class="form-group" id="eggsSection">
+        <h3>Eieren</h3>
+        <div id="eggContainer">
+          <div class="form-group">
+            <label for="layDate1">Legdatum:</label>
+            <input type="date" class="form-control" id="layDate1" required>
+          </div>
+          <div class="form-group">
+            <label for="setDate1">Zetdatum:</label>
+            <input type="date" class="form-control" id="setDate1" required>
+          </div>
+          <div class="form-group">
+            <label for="hatchDate1">Uitkomstdatum:</label>
+            <input type="date" class="form-control" id="hatchDate1" required>
+          </div>
+          <div class="form-group">
+            <label for="ringDate1">Ringdatum:</label>
+            <input type="date" class="form-control" id="ringDate1" required>
+          </div>
+          <div class="form-group">
+            <label for="gender1">Geslacht:</label>
+            <select class="form-control" id="gender1">
+              <option value="man">Man</option>
+              <option value="vrouw">Vrouw</option>
+              <option value="onbekend">Onbekend</option>
+            </select>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" id="addEggButton">Voeg Ei Toe</button>
+      </div>
+
+      <div class="form-group">
+        <h3>Observaties en Notities</h3>
+        <label for="observations">Observaties:</label>
+        <textarea class="form-control" id="observations"></textarea>
+      </div>
+
+      <div class="form-group">
+        <h3>Resultaten</h3>
+        <label for="resultNotes">Notities:</label>
+        <textarea class="form-control" id="resultNotes"></textarea>
+      </div>
+
+      <div class="form-group">
+        <h3>Afbeeldingen</h3>
+        <input type="file" class="form-control" id="imageUpload" accept="image/*">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Opslaan</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="kweekkaart-scripts.js"></script>
+</body>
+</html>

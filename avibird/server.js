@@ -112,8 +112,36 @@ app.delete('/delete-bird/:id', (req, res) => {
   });
 });
 
-// ...
+// CREATE - Route voor het toevoegen van een nieuwe vogel
+app.post('/add-bird', (req, res) => {
+  const vogelData = req.body;
+
+  db.query(
+    'INSERT INTO vogels (soort, ondersoort, kleurslag, split, geslacht, geboortedatum, ringnummer) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    [
+      vogelData.soort,
+      vogelData.ondersoort,
+      vogelData.kleurslag,
+      vogelData.split,
+      vogelData.geslacht,
+      vogelData.geboortedatum,
+      vogelData.ringnummer,
+    ],
+    (err, result) => {
+      if (err) {
+        console.error('Error inserting data into the database:', err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      } else {
+        console.log('Data inserted into the database');
+        res.json({ message: 'Vogel toegevoegd' });
+      }
+    }
+  );
+});
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
+
+
+

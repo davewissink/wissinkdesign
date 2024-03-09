@@ -1,19 +1,4 @@
 
-    /* Voeg hier je eigen stijl toe */
-    body {
-      background-color: #f8f9fa;
-      color: #343a40;
-    }
-
-    h2 {
-      color: #ff8c00; /* Oranje tekstkleur voor koppen */
-      text-shadow: 2px 5px 4px rgba(13, 0, 0, 0.2); /* Tekstschaduw voor diepte */
-      font-size: 2.5rem; /* Aanpassing van lettergrootte */
-      margin-top: 5px;
-      margin-bottom: 10px; /* Extra ruimte onder koppen */
-      text-align: center;
-      text-transform: uppercase;
-    }
 
     table {
       margin-top: 20px;
@@ -75,7 +60,7 @@
     }
 
     #editForm button {
-      background-color: #4CAF50; /* Groene achtergrond */
+      background-color: #ff8c00; /* Groene achtergrond */
       color: white;
       padding: 10px 15px;
       border: none;
@@ -84,7 +69,7 @@
     }
 
     #editForm button:hover {
-      background-color: #45a049; /* Donkergroene achtergrond bij hover */
+      background-color: #f3992c; /* Donkergroene achtergrond bij hover */
     }
     
     .bird-card {
@@ -110,4 +95,23 @@
       padding: 20px;
       margin-top: 20px;
     }
+    /* Voeg deze stijlregels toe aan je stijlblad */
+    .action-button {
+      color: #fff; /* Witte tekst */
+      background-color: #ff8c00; /* Een moderne, heldere blauwe kleur */
+      border: none; /* Geen rand voor een strakker uiterlijk */
+      
+      padding: 10px 20px; /* Meer padding voor een groter, toegankelijker knopoppervlak */
+      cursor: pointer; /* Behoud de cursor als pointer om aan te geven dat het een klikbaar element is */
+      border-radius: 5px; /* Ronde hoeken voor een modernere uitstraling */
+      font-size: 16px; /* Grotere tekst voor betere leesbaarheid */
+      transition: background-color 0.3s ease; /* Soepele overgang voor de hover effect */
+    }
+    
+    .action-button:hover {
+      background-color: #f3992c; /* Donkerdere schaduw van blauw voor het hover effect */
+      color: #fff; /* Behoud witte tekstkleur */
+    }
+    
+
  

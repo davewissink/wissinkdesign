@@ -56,4 +56,13 @@
 .card {
     margin-bottom: 20px;
   }
+  a.btn-back {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
   

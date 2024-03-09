@@ -3,41 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marktplaats</title>
+  <title>VogelMarkt</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/marktplaats-style.css"> <!-- Voeg hier je eigen stijlblad toe -->
+  <link rel="stylesheet" href="css/koop-en-verkoop-style.css"> <!-- Voeg je aangepaste stijlblad hier toe -->
 </head>
 <body>
+  <a href="dashboard.html" class="btn btn-back">Terug naar Dashboard</a>
   <div class="container mt-5">
-    <h2>Marktplaats</h2>
+    <h2>VogelMarkt</h2>
 
-    <div class="card-deck">
-      <!-- Koop en Verkoop sectie -->
-      <div class="card">
-        <img src="images/bird-for-sale.jpg" class="card-img-top" alt="Vogel te koop">
-        <div class="card-body">
-          <h5 class="card-title">Koop en Verkoop</h5>
-          <p class="card-text">Bied hier je vogels te koop aan of zoek naar vogels om te kopen.</p>
-          <a href="koop-en-verkoop.html" class="btn btn-primary">Bekijk Aanbiedingen</a>
+    <!-- Formulier voor het toevoegen van items -->
+    <form id="addItemForm">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="item">Vogelsoort:</label>
+          <input type="text" class="form-control" id="item" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="price">Prijs (in euro's):</label>
+          <input type="number" class="form-control" id="price" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="seller">Verkoper:</label>
+          <input type="text" class="form-control" id="seller" required>
         </div>
       </div>
-
-      <!-- Benodigdheden sectie -->
-      <div class="card">
-        <img src="images/bird-supplies.jpg" class="card-img-top" alt="Vogelbenodigdheden">
-        <div class="card-body">
-          <h5 class="card-title">Benodigdheden</h5>
-          <p class="card-text">Verkoop voeding, kooien, speelgoed en andere vogelbenodigdheden.</p>
-          <a href="vogelbenodigdheden.html" class="btn btn-primary">Ontdek Benodigdheden</a>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="description">Beschrijving:</label>
+          <textarea class="form-control" id="description" rows="3"></textarea>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="contact">Contactgegevens:</label>
+          <input type="text" class="form-control" id="contact">
         </div>
       </div>
+      <div class="form-group">
+        <label for="image">Afbeelding URL:</label>
+        <input type="url" class="form-control" id="image">
+      </div>
+      
+      <!-- Voeg dit toe aan het einde van het <form> element -->
+      <div class="form-group">
+        <label for="file">Afbeelding uploaden:</label>
+        <input type="file" class="form-control-file" id="file" accept="image/*">
+      </div>
+      <button type="submit" class="btn btn-success">Voeg Toe</button>
+
+    </form>
+
+    <!-- Kaarten voor de items -->
+    <div id="itemList" class="card-columns">
+      <!-- Dynamisch gegenereerde kaarten komen hier -->
     </div>
-
   </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="js/marktplaats-script.js"></script> <!-- Voeg hier je eigen JavaScript-bestand toe -->
+  <script src="js/koop-en-verkoop-script.js" defer></script> <!-- Voeg je aangepaste JavaScript-bestand hier toe -->
 </body>
 </html>

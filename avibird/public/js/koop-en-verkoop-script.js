@@ -1,52 +1,51 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('DOM is geladen');
-
     const addItemForm = document.getElementById('addItemForm');
     const itemList = document.getElementById('itemList');
-    let nextItemId = 1; // Unieke id's toewijzen aan items
-
-    function addItemToCards(item) {
-        const card = document.createElement('div');
-        const itemId = nextItemId++; // Unieke id toewijzen en verhogen voor het volgende item
-        card.className = 'card';
-        card.setAttribute('data-item-id', itemId); // Toevoegen van het item-id aan de card
-        card.innerHTML = `
-            <div class="card-body">
-                <h5 class="card-title">${item.name}</h5>
-                <p class="card-text">Prijs: €${item.price}</p>
-                <p class="card-text">Verkoper: ${item.seller}</p>
-                <button class="btn btn-danger btn-block" onclick="removeItem(${itemId})">Verwijder</button>
-            </div>
-        `;
-        itemList.appendChild(card);
-    }
-
+  
     addItemForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        console.log('Formulier ingediend');
-
-        const newItem = {
-            name: document.getElementById('item').value,
-            price: document.getElementById('price').value,
-            seller: document.getElementById('seller').value
-        };
-
-        addItemToCards(newItem);
-
-        addItemForm.reset();
+      event.preventDefault();
+  
+      const fileInput = document.getElementById('file');
+      const uploadedFile = fileInput.files[0];
+  
+      if (!uploadedFile) {
+        alert('Selecteer een afbeelding voordat je het item toevoegt.');
+        return;
+      }
+  
+      // Hier kun je de logica toevoegen om de afbeelding naar een server te uploaden
+      // en de URL van de geüploade afbeelding te verkrijgen. Voor nu gebruiken we een placeholder-URL.
+      const item = {
+        vogelsoort: document.getElementById('item').value,
+        prijs: document.getElementById('price').value,
+        verkoper: document.getElementById('seller').value,
+        beschrijving: document.getElementById('description').value,
+        contactgegevens: document.getElementById('contact').value,
+        afbeelding: 'https://via.placeholder.com/150', // Plaats hier de URL van de geüploade afbeelding
+      };
+  
+      addItemToPage(item);
+      resetForm();
     });
-
-    window.removeItem = function (itemId) {
-        console.log('Verwijder item met id:', itemId);
-        const card = itemList.querySelector(`[data-item-id="${itemId}"]`);
-
-        // Voer hier je authenticatiecontrole uit (bijvoorbeeld vergelijken met de huidige gebruiker)
-        const isAuthorized = true; // Vervang dit door een echte controle op basis van je authenticatiesysteem
-
-        if (isAuthorized) {
-            itemList.removeChild(card);
-        } else {
-            console.log('Ongeautoriseerde verwijderpoging.');
-        }
-    };
-});
+  
+    function addItemToPage(item) {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${item.afbeelding}" class="card-img-top" alt="${item.vogelsoort}">
+        <div class="card-body">
+          <h5 class="card-title">${item.vogelsoort}</h5>
+          <p class="card-text">${item.beschrijving}</p>
+          <p class="card-text"><strong>Prijs:</strong> €${item.prijs}</p>
+          <p class="card-text"><strong>Verkoper:</strong> ${item.verkoper}</p>
+          <p class="card-text"><strong>Contact:</strong> ${item.contactgegevens}</p>
+        </div>
+      `;
+      itemList.appendChild(card);
+    }
+  
+    function resetForm() {
+      addItemForm.reset();
+    }
+  });
+  

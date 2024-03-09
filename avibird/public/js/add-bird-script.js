@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const ringnummer = document.getElementById('ringnummer').value;
   
       // Send a POST request to the server to add the bird
-      fetch('http://localhost:3000/vogels', {
+      fetch('http://localhost:3000/add-bird', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -33,19 +33,29 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(data => {
           console.log('Success:', data);
-          // Voeg verdere acties toe indien nodig, bijv. weergeven van een gebruikersbericht.
+          
+          // Reset form fields after successful post request
+          resetFormFields();
       })
       .catch((error) => {
           console.error('Error:', error);
       });
     });
   
-    // Aanvullende functies indien nodig
-  
     // Functie om de datum te formatteren naar 'YYYY-MM-DD'
     function formatDate(inputDate) {
       const parts = inputDate.split('-');
       return `${parts[2]}-${parts[1]}-${parts[0]}`;
     }
-  });
-  
+
+    // Functie om formulier velden te legen
+    function resetFormFields() {
+        document.getElementById('soort').value = '';
+        document.getElementById('ondersoort').value = '';
+        document.getElementById('kleurslag').value = '';
+        document.getElementById('split').value = '';
+        document.getElementById('geslacht').value = 'man'; // of een andere standaardwaarde indien nodig
+        document.getElementById('geboortedatum').value = '';
+        document.getElementById('ringnummer').value = '';
+    }
+});

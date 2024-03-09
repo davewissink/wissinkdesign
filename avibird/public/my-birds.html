@@ -6,6 +6,7 @@
   <title>Mijn Vogels</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/my-style.css">
+  <link rel="stylesheet" href="css/common-styles.css">
   <style>
     .bird-card {
       transition: transform 0.3s;
@@ -79,8 +80,9 @@
               <p>Geslacht: ${bird.geslacht}</p>
               <p>Kleurslag: ${bird.kleurslag}</p>
               <p>Split: ${bird.split}</p>
-              <button onclick="bewerkVogel(${JSON.stringify(bird).split('"').join("&quot;")})">Bewerken</button>
-              <button onclick="verwijderVogel(${bird.id})">Verwijderen</button>
+              <button class="action-button" onclick="bewerkVogel(${JSON.stringify(bird).split('"').join("&quot;")})">Bewerken</button>
+              <button class="action-button" onclick="verwijderVogel(${bird.id})">Verwijderen</button>
+
             `;
             birdsList.appendChild(card);
           });
