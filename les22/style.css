@@ -1,0 +1,37 @@
+body {
+    background-color: #f8f9fa; /* Achtergrondkleur van de body */
+}
+
+h1, h2 {
+    font-family: 'Arial', sans-serif; /* Schriftfamilie voor koppen */
+    text-align: center; /* Center de titels */
+    margin-bottom: 20px; /* Ruimte onder de titels */
+}
+
+.navbar {
+    justify-content: flex-end; /* Menu-items naar rechts uitlijnen */
+}
+
+img {
+    width: 100%; /* Zorg ervoor dat de afbeelding 100% van de kolombreedte beslaat */
+    height: 200px; /* Stel een vaste hoogte in voor de afbeeldingen */
+    object-fit: cover; /* Zorg ervoor dat de afbeeldingen proportioneel worden geschaald */
+    border-radius: 5px; /* Optioneel: geef een afgeronde hoeken voor een betere uitstraling */
+    margin-bottom: 15px; /* Voeg ruimte onder elke afbeelding toe */
+}
+
+.row {
+    margin-bottom: 30px; /* Voeg ruimte tussen rijen toe */
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px; /* Zorg ervoor dat de footer 200 pixels hoog is */
+    display: flex; /* Flexbox voor uitlijning */
+    align-items: center; /* Verticaal centreren */
+    justify-content: center; /* Horizontaal centreren */
+    color: #666; /* Grijze kleur voor copyright */
+}

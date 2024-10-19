@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-primary text-white">
+        <div class="container">
+            <h1>Mijn Website</h1>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="overmij.html">Over mij</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container my-4" style="max-width: 800px;">
+        <h2>Contact</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Naam</label>
+                <input type="text" class="form-control" id="name" placeholder="Vul je naam in">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Vul je e-mail in">
+            </div>
+            <div class="form-group">
+                <label for="message">Bericht</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Vul je bericht in"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Verzend</button>
+        </form>
+    </div>
+
+    <footer class="bg-secondary text-white text-center py-5" style="min-height: 200px;">
+        <p>&copy; 2024 Mijn Website. Alle rechten voorbehouden.</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
